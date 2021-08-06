@@ -1,0 +1,33 @@
+#server:
+#  port: 8888
+#spring:
+#  application:
+#    name: api-gateway
+#  cloud:
+#    gateway:
+#      routes: #Array type
+#        - id: order-service  #Route unique identifier
+#          #uri: http://127.0.0.1:8000  #The address you want to forward to
+#
+#          uri: lb://spring-order-service # Get the name forwarding from nacos, lb is the load balance training strategy
+#
+#          order: 1  #Priority, the smaller the number, the higher the priority
+#          predicates:  #Assert which path is configured to forward
+#            - Path=/order-server/**
+#         #   - Before=2021-09-11T01:01:01.000+08:00   all request must before this time
+#         #   - Query=source  only response to the request with [ Query ]
+#          filters: #filter, request to pass the filter modification during the delivery process
+#            - StripPrefix=1  #Remove the first layer prefix
+#      discovery:
+#        locator:
+#          enabled: true
+#    nacos:
+#      discovery:
+#        server-addr: 127.0.0.1:8848 #<--- nacos dashboard port
+#  # zipkin properties
+#  zipkin:
+#    base-url: http://127.0.0.1:9411/
+#    discovery-client-enabled: false
+#  sleuth:
+#    sampler:
+#      probability: 1.0

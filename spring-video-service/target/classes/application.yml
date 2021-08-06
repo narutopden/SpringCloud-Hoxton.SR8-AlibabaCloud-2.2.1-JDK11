@@ -1,0 +1,38 @@
+#server:
+#  port: 9007
+#
+#spring:
+#  application:
+#    name: spring-video-service
+#
+#  cloud:
+#    nacos:
+#      discovery:
+#        server-addr: 127.0.0.1:8848 #<--- nacos dashboard port
+#    #sentinel properties
+#    sentinel:
+#      transport:
+#        dashboard: 127.0.0.1:8080
+#        port: 9992
+#
+#  # zipkin properties
+#  zipkin:
+#    base-url: http://127.0.0.1:9411/
+#    discovery-client-enabled: false
+#  sleuth:
+#    sampler:
+#      probability: 1.0
+#
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://39.104.78.202:3306/cloud_video?useUnicode=true&characterEncoding=utf-8&useSSL=false
+#    username: root
+#    password: root
+#
+#
+#
+## Sql log on the console and enable camelcase
+#mybatis:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#    map-underscore-to-camel-case: true

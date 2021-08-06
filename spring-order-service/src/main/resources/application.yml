@@ -1,0 +1,52 @@
+#server:
+#  port: 8001
+#
+#spring:
+#  application:
+#    name: spring-order-service
+#
+#  cloud:
+#    #nacos properties
+#    nacos:
+#      discovery:
+#        server-addr: 127.0.0.1:8848
+#
+#    #sentinel properties
+#    sentinel:
+#      transport:
+#        dashboard: 127.0.0.1:8080
+#        port: 9990 # microservice and dashboard communication port
+#
+#
+#    # zipkin properties
+#  zipkin:
+#    base-url: http://127.0.0.1:9411/
+#    discovery-client-enabled: false
+#  sleuth:
+#    sampler:
+#      probability: 1.0
+#
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://39.104.78.202:3306/cloud_order?useUnicode=true&characterEncoding=utf-8&useSSL=false
+#    username: root
+#    password: root
+#
+#
+## connection of Feign and Sentinel [ specially in fallback method ]
+#feign:
+#  sentinel:
+#    enabled: true
+#
+## Sql log on the console and enable camelcase
+#mybatis:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#    map-underscore-to-camel-case: true
+#
+##choosing the loadBalancer as RandomRule
+#spring-video-service:
+#  ribbon:
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+#
+#

@@ -1,0 +1,5 @@
+com/bluesky/VideoApplication.class
+com/bluesky/service/impl/VideoServiceImpl.class
+com/bluesky/controller/VideoController.class
+com/bluesky/service/VideoService.class
+com/bluesky/mapper/VideoMapper.class
